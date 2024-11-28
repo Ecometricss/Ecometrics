@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario - Ecometrics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/registro.css">
+</head>
+<body>
+    <div class="decorative-plant plant-1">🌾</div>
+    <div class="decorative-plant plant-2">🌿</div>
+    
+    <div class="container animate_animated animate_fadeIn">
+        <h1 class="animate_animated animate_bounceIn">Registro de Usuario</h1>
+        <form action="PHP/registro.php" method="POST">
+            <div class="input-group animate_animated animate_fadeInLeft">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                <span class="icon">👤</span>
+            </div>
+
+            <div class="input-group animate_animated animate_fadeInLeft" style="animation-delay: 0.2s">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresa un correo" required>
+                <span class="icon">📧</span>
+            </div>
+
+            <div class="input-group animate_animated animate_fadeInLeft" style="animation-delay: 0.4s">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa una contraseña" required>
+                <span class="icon">🔒</span>
+            </div>
+
+            <button type="submit" class="animate_animated animate_fadeInUp" style="animation-delay: 0.6s">
+                Registrarse
+            </button>
+        </form>
+        <div class="register-section animate_animated animate_fadeInUp" style="animation-delay: 0.6s">
+            <p class="register-text">
+                ¿Tienes cuenta? 
+                <a href="login.html" class="register-link">Inicia sesión</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

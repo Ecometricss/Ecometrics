@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Ecometrics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/login.css"> 
+
+</head>
+<body>
+
+    <!-- Plantas Decorativas  -->
+    <div class="decorative-plant plant-1">🌾</div>
+    <div class="decorative-plant plant-2">🌿</div>
+    <div class="decorative-plant plant-3">🍃</div>
+    <div class="decorative-plant plant-4">🌱</div>
+
+    <div class="container animate_animated animate_fadeIn">
+        <h1 class="animate_animated animate_bounceIn">Bienvenido</h1>
+
+        <form method="POST" action="PHP/login.php">
+            <div class="input-group animate_animated animate_fadeInLeft">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+                <span class="icon">📧</span>
+            </div>
+            
+            <div class="input-group animate_animated animate_fadeInLeft" style="animation-delay: 0.2s">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña" required>
+                <span class="icon">🔒</span>
+            </div>
+            
+            <button type="submit" class="animate_animated animate_fadeInUp" style="animation-delay: 0.4s">
+                Iniciar Sesión
+                <span>🚜</span>
+            </button>
+        </form>
+        <div class="register-section animate_animated animate_fadeInUp" style="animation-delay: 0.6s">
+            <p class="register-text">
+                ¿No tienes cuenta? 
+                <a href="index.html" class="register-link">Regístrate aquí</a>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="background-elements">
+
+        <script>
+            const plantEmojis = ['🌾', '🌿', '🍃', '🌱'];
+            const backgroundElements = document.querySelector('.background-elements');
+            
+            for (let i = 0; i < 20; i++) {
+                const plant = document.createElement('div');
+                plant.className = 'plant';
+                plant.textContent = plantEmojis[Math.floor(Math.random() * plantEmojis.length)];
+                plant.style.left = `${Math.random() * 100}%`;
+                plant.style.top = `${Math.random() * 100}%` ;
+                plant.style.animationDelay =`${Math.random() * 2}s`;
+                backgroundElements.appendChild(plant);
+            }
+        </script>
+    </div>
+</body>
+</html>
